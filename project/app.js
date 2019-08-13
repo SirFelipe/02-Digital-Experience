@@ -1,25 +1,18 @@
-// IMPORTANDO O EXPRESS
-var express = require('express');
+// CONFIG FILE
+var app = require('./config/server.js');
 
-// INICIALIZANDO O EXPRESS
-var app = express();
 
-// ENGINE EJS
-app.set('view engine', 'ejs');
+// Require da ROTA home
+var rotaHome = require('./app/routes/home.js');
+rotaHome(app);
 
-// HOME
-app.get('/', function(req, resp){
-    resp.render('home/home');
-})
+// Require da ROTA cadastro de produtos
+var rotaCadastrar = require('./app/routes/cadastrar.js');
+rotaCadastrar(app);
 
-app.get('/produtos', function(req, resp){
-    resp.render('produtos/lista');
-})
-
-// ADD PRODUTO
-app.get('/adicionar_produto', function(req, resp){
-    resp.render('admin/form_add_produto');
-});
+// Require da ROTA de lista de produtos
+var rotaProdutos = require('./app/routes/produtos.js');
+rotaProdutos(app);
 
 app.listen(3000, function(){
     console.log('Servidor express ativo.');

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adicionar produto</title>
+    <style>
+        .textoCentralizado{
+            text-align: center;
+        }
+
+        form {
+            padding:50px;
+            margin: 0 auto;
+        }
+
+        form div input{
+            display: inline-block;
+        }
+
+        input{
+            background: #F2F2F2;
+        }
+
+        #grad1 {
+            width: 1000px;
+            height: 200px;
+            background: rgb(9,82,121);
+            background: linear-gradient(90deg, rgba(9,82,121,1) 4%, rgba(0,212,255,1) 63%, rgba(242,242,242,1) 96%);
+        }
+</style>
+</head>
+<body>
+    <div class="textoCentralizado">
+        <h2>Adicionar Produtos</h2>
+        <div id="grad1">
+                <form method="POST" action="">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nm_produto" placeholder="Digite o nome do produto"/>
+                    </div>
+                    <div>
+                        <label for="qtd_produto">Quantidade</label>
+                        <input type="number" name="qtd_produto" placeholder="Digite a quantidade de produtos">
+                    </div>
+                    <input type="submit" name="cadastrar" value="Cadastrar">
+                </form>
+        </div>
+    </div>
+</body>
+</html>
