@@ -1,7 +1,8 @@
-var dbConnection = require('../../config/dbConnection')
+//var dbConnection = require('../../config/dbConnection');
 module.exports = function(app){
-    var connection = dbConnection();
+    //var connection = dbConnection();
     app.get('/produtos', function(req, resp){
+        var connection = app.config.dbConnection();
         connection.query('SELECT * FROM tb_produto', function(error, result){
             //console.log(result);
             //console.log(error);

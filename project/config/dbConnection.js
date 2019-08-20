@@ -14,5 +14,6 @@ var connectionMySQL = function(){
     return connection;
 }
 module.exports = function(){
+    console.log('O autoload do Consign carregou apenas o módulo de conexão');
     return connectionMySQL;
 }
