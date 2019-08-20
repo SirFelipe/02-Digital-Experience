@@ -17,16 +17,17 @@
     <!-- Imprimindo com JS <%= %> -->
     <table style="width:50%">
             <tr>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>DESCRIÇÃO</th>
             </tr>
             <% console.log(produto); for(var i=0; i < produto.length; i++){ %>
                 <tr>
-                    <td><%= produto[i].id %></td>
-                    <td><%= produto[i] %></td>
+                    <td><%= produto[i].id_produto %></td>
+                    <td><%= produto[i].nm_produto %></td>
+                    <td><%= produto[i].ds_produto %></td>
                 </tr>
-            }
+            <% }  %>
         </table>
 </body>
 </html>
