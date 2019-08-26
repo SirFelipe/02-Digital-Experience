@@ -3,7 +3,9 @@ module.exports = function(app){
     //var connection = dbConnection();
     app.get('/produtos', function(req, resp){
         var connection = app.config.dbConnection();
-        connection.query('SELECT * FROM tb_produto', function(error, result){
+        var produtosModel = app.app.models.produtosModel;
+        
+        produtosModel.getProdutos(connection, function(error, result){
             //console.log(result);
             //console.log(error);
             //resp.send(result);
