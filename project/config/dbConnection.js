@@ -1,7 +1,5 @@
 var mysql = require('mysql');
 var connectionMySQL = function(){
-    console.log('Conexão estabelecida');
-        
     var connection = mysql.createConnection({
             port: '3306',
             host: 'localhost',
@@ -10,6 +8,7 @@ var connectionMySQL = function(){
             database: 'sistema_produto'
         }
     );
+    console.log('Conexão estabelecida');
 
     return connection;
 }
