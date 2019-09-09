@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Motoristas</title>
+</head>
+<body>
+    <h1>Motoristas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>RG</th>
+        </tr>
+        <% for(var i=0; i<motoristas.length; i++){ %>
+            <tr>
+                <td><%= motoristas[i].id_motorista %></td>
+                <td><%= motoristas[i].nm_motorista %></td>
+                <td><%= motoristas[i].nr_rg %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
