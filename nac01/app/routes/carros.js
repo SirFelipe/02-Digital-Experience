@@ -1,9 +1,9 @@
-var dbConnection = require('../config/dbConnection');
-
+//var dbConnection = require('../config/dbConnection');
 module.exports = function(application){
-    var connection = dbConnection();
     application.get('/carros', function(req, resp){
-        connection.query("SELECT * FROM TB_CARRO", function(error, result){
+        var connection = application.config.dbConnection();
+        var carrosModel = application.app.models.carrosModel;
+        carrosModel.getCarros(connection, function(error, result){
             resp.render('carro/carros', {carros : result});
         });
     });

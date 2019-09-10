@@ -1,4 +1,4 @@
-var application = require('./app/config/server')
+var application = require('./config/server')
 
 application.get('/', function(req, res){
     res.send('Bem vindo ao novo sistema do Detran');

@@ -5,8 +5,7 @@ module.exports = function(app){
     });
 
     app.post('/produtos/salvar', function(req, resp){
-        var produto = req.body;
-        
+        var produto = req.body;     
         // Conexão
         var connection = app.config.dbConnection();
         // Model
