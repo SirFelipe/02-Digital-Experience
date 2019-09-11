@@ -5,7 +5,9 @@ var bodyParser = require('body-parser')
 
 application.set('view engine', 'ejs');
 application.set('views', './app/views');
-application.use(bodyParser.json());
+application.use(bodyParser.urlencoded({extended : true}));
+//application.use(bodyParser.json());
+
 consign().include('app/routes')
 .then('config/dbConnection.js')
 .then('app/models')

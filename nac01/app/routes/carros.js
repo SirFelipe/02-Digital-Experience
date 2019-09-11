@@ -4,7 +4,7 @@ module.exports = function(application){
         var connection = application.config.dbConnection();
         var carrosModel = application.app.models.carrosModel;
         carrosModel.getCarros(connection, function(error, result){
-            resp.render('carro/carros', {carros : result});
+            resp.render('carro/carros', { carros : result });
         });
     });
 }

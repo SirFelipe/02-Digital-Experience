@@ -4,7 +4,7 @@ module.exports = function(){
     };
 
     this.salvarCarro = function(carro, connection, callback){
-        connection.query("INSERT INTO TB_CARRO SET ?", carro, callback);
+        connection.query("INSERT INTO tb_carro SET ? ", carro, callback);
     }
 
     return this;

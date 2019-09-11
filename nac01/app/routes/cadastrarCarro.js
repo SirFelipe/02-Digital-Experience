@@ -6,6 +6,7 @@ module.exports = function(app){
 
     app.post('/carros/salvar', function(req, resp){
         var carro = req.body;
+        console.log(carro);
         // Conexão
         var connection = app.config.dbConnection();
         // Model
@@ -13,6 +14,6 @@ module.exports = function(app){
         // Função salvarCarro
         carrosModel.salvarCarro(carro, connection, function(error, result){
             resp.redirect('/carros');
-        });
+        })
     });
-}
+};
