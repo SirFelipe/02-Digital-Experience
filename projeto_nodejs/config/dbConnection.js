@@ -6,7 +6,7 @@ var conecMySQL = function() {
   {
     host : 'localhost',
     user : 'root',
-    password : 'labfiap#2019$',
+    password : '',
     database : 'sistema_produtos'
   }
 );
