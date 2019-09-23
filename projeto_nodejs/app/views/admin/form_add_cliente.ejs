@@ -6,38 +6,46 @@
 		</head>
 	<body>
 
-		<h1>Adicionar produto</h1>
+        <% if(validacao) { %>
+
+            <ul>
+                <% for(var i = 0; i < validacao.length; i++) { %>
+                    <li><%= validacao[i].msg %></li>
+                <% } %>    
+            </ul>    
+        <% } %>    
+		<h1>Adicionar Cliente</h1>
 
 		<form action="/clientes/salvar" method="post">
 
             <div>
             <label>Nome</label>
-            <input type="text" name="nome">
+            <input type="text" name="nome" value="<%= cliente.nome %>">
             </div>
 
             <div>
             <label>Sobrenome</label>
-            <input type="text" name="sobrenome">
+            <input type="text" name="sobrenome" value="<%= cliente.sobrenome %>">
             </div>
 
             <div>
                 <label>RG</label>
-                <input type="text" name="rg">
+                <input type="text" name="rg" value="<%= cliente.rg %>">
             </div>
 
             <div>
                 <label>CPF</label>
-                <input type="text" name="cpf">
+                <input type="text" name="cpf" value="<%= cliente.cpf %>">
             </div>
 
             <div>
                 <label>CEP</label>
-                <input type="text" name="cep">
+                <input type="text" name="cep" value="<%= cliente.cep %>">
              </div>
 
              <div>
                 <label>Endereço</label>
-                <input type="text" name="endereco">
+                <input type="text" name="endereco" value="<%= cliente.endereco %>">
             </div>
     
 
