@@ -5,7 +5,6 @@ module.exports.formulario_cliente = function(app, req, res){
 module.exports.add_cliente = function(app, req, res){
     var cliente = req.body;
     //res.send(cliente);
-  
     //console.log(cliente) //DEBUG
   
     //Validação
