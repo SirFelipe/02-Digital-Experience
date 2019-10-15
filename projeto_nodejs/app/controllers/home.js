@@ -3,7 +3,6 @@ module.exports.index = function(app, req, res){
     var produtosModel = new app.app.models.ProdutosDAO(connection);
 
     produtosModel.getCincoProdutos(function(error, result){
-        console.log(result)
         res.render('home/index', { produtos: result });
     });
 }
