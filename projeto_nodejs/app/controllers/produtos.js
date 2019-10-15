@@ -7,6 +7,7 @@ module.exports.produtos = function(app, req, res){
     });
 }
 
+
 module.exports.produto = function(app,req, res){
     var connection = app.config.dbConnection();
     var produtosModel = new app.app.models.ProdutosDAO(connection);

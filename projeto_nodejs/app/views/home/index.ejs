@@ -46,21 +46,21 @@
 	    	<div class="row">
 	    		<div class="col-md-8">
 	    			<div class="produto_wrapper">
-							<a href="produto.html" class="produto_nome">Nome do Produto</a>
+							<a href="produto.html" class="produto_nome"><%= produtos[0].nome %></a>
 		    			<br />
 		    			<p class="produto_descricao">
-		    				Aqui fica a descrição do produto principal da página com um limite de 100 caracteres!
+		    				<%= produtos[0].descricao %>
 		    			</p>
 		    		</div>
 		    	</div>
 
 	    		<div class="col-md-4">
 	    			<div class="produto_wrapper">
-		    			<a href="produto.html" class="produto_nome">Nome do Produto</a>
+		    			<a href="produto.html" class="produto_nome"><%= produtos[1].nome %></a>
 
 		    			<br />
 		    			<p class="produto_descricao">
-								Aqui fica a descrição do produto principal da página com um limite de 100 caracteres!
+							<%= produtos[1].descricao %>
 		    			</p>
 		    		</div>
 		    	</div>
@@ -69,41 +69,39 @@
 	    	<div class="row">
 	    		<div class="col-md-4">
 	    			<div class="produto_wrapper">
-							<a href="produto.html" class="produto_nome">Nome do Produto</a>
+							<a href="produto.html" class="produto_nome"><%= produtos[2].nome %></a>
 		    			<br />
 		    			<p class="produto_descricao">
-								Aqui fica a descrição do produto principal da página com um limite de 100 caracteres!
+							<%= produtos[2].descricao %>
 		    			</p>
 		    		</div>
 		    	</div>
 
 	    		<div class="col-md-4">
 	    			<div class="produto_wrapper">
-							<a href="produto.html" class="produto_nome">Nome do Produto</a>
+							<a href="produto.html" class="produto_nome"><%= produtos[3].nome %></a>
 		    			<br />
 		    			<p class="produto_descricao">
-								Aqui fica a descrição do produto principal da página com um limite de 100 caracteres!
+							<%= produtos[3].descricao %>
 		    			</p>
 		    		</div>
 		    	</div>
 
 	    		<div class="col-md-4">
 	    			<div class="produto_wrapper">
-							<a href="produto.html" class="produto_nome">Nome do Produto</a>
+							<a href="produto.html" class="produto_nome"><%= produtos[4].nome %></a>
 		    			<br />
 		    			<p class="produto_descricao">
-								Aqui fica a descrição do produto principal da página com um limite de 100 caracteres!
+							<%= produtos[4].descricao %>
 		    			</p>
 		    		</div>
 		    	</div>
-	    	</div>
+			</div>
 
 	    	<div class="row ver_mais">
 	    		<button type="button" class="btn btn-default"><a href="produtos.html">Ver todos os produtos</a></button>
-	    	</div>
-
-	    </div>
-
+			</div>
+		</div>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	</body>

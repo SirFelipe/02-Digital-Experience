@@ -7,6 +7,10 @@ ProdutosDAO.prototype.getProdutos = function(callback){
   this._connection.query('SELECT * FROM produto', callback);
   }
 
+ProdutosDAO.prototype.getCincoProdutos = function(callback){
+  this._connection.query('SELECT * FROM SELECT * FROM produto DESC LIMIT 5', callback);
+}
+
 ProdutosDAO.prototype.getProduto = function(callback){
   this._connection.query('SELECT * FROM produto WHERE id_produto = 1', callback);
   }
